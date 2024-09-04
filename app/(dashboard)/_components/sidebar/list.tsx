@@ -13,8 +13,6 @@ const List = (props: Props) => {
         }
     })
 
-    console.log("->",userMemberships)
-
     if(userMemberships.data?.length == 0){
         return null
     }
