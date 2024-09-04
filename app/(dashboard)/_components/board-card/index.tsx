@@ -1,14 +1,17 @@
 "use client";
 
+import { Actions } from "@/components/actions";
+import { Skeleton } from "@/components/ui/skeleton";
+import { api } from "@/convex/_generated/api";
+import { useApiMutation } from "@/hooks/use-api-mutation";
 import { useAuth } from "@clerk/nextjs";
 import { formatDistanceToNow } from "date-fns";
+import { MoreHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Overlay from "./overlay";
+import { toast } from "sonner";
 import Footer from "./footer";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Actions } from "@/components/actions";
-import { MoreHorizontal } from "lucide-react";
+import Overlay from "./overlay";
 
 interface BoardCardProps {
   id: string;
@@ -38,6 +41,17 @@ const BoardCard = ({
 
     const createAtLabel = formatDistanceToNow(createdAt, {addSuffix: true});
 
+    const {mutate:onFavorite, pending:pendingFavorite} =  useApiMutation(api.board.favorite);
+    const {mutate:onUnFavorite, pending:pendingUnFavorite} =  useApiMutation(api.board.unfavorite)
+    ;
+ 
+    const toggleFavorite = () => {
+          if(isFavorite){
+               onUnFavorite({id}).catch(()=> toast.error("Failed to unfavorite board"));
+          } else {
+               onFavorite({id, orgId:orgId}).catch(()=> toast.error("Failed to favorite board"));
+          }
+    }
 
 
   return (
@@ -69,8 +83,8 @@ const BoardCard = ({
             authorLabel={authorLabel}
             createAtLabel={createAtLabel}
             title = {title}
-            onClick={()=>{}}
-            disabled={false}
+            onClick={toggleFavorite}
+            disabled={pendingFavorite||pendingUnFavorite}
             />
     </div>
     </Link>
