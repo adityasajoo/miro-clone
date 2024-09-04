@@ -2,12 +2,12 @@ import { mutation } from './_generated/server'
 import { v } from 'convex/values';
 
 const images = [
-    "/placeholders/1.jpg",
-    "/placeholders/2.jpg",
-    "/placeholders/3.jpg",
-    "/placeholders/4.jpg",
-    "/placeholders/5.jpg",
-    "/placeholders/6.jpg",
+    "/placeholders/1.svg",
+    "/placeholders/2.svg",
+    "/placeholders/3.svg",
+    "/placeholders/4.svg",
+    "/placeholders/5.svg",
+    "/placeholders/6.svg",
 ]
 
 export const create = mutation({

@@ -3,7 +3,7 @@
 import React from 'react';
 import EmptyOrg from '../_components/empty-org';
 import { useOrganization } from '@clerk/nextjs';
-import BoardList from '../_components/BoardList';
+import BoardList from '../_components/board-list';
 
 interface DashboardProps  {
   searchParams: {
@@ -19,7 +19,7 @@ const Dashboard = ({searchParams}: DashboardProps) => {
   {!organization  ? 
     <EmptyOrg/>
     : <BoardList 
-        ordId={organization.id}
+        orgId={organization.id}
         query={searchParams}
     />}
   

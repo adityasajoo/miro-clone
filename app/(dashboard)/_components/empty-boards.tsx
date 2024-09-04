@@ -21,7 +21,7 @@ const EmptyBoards = (props: Props) => {
     if(!organization) return;
     mutate({
       orgId: organization.id,
-      title: "New board",
+      title: "Untitled board",
     }).then((id)=>{
       toast.success("Board created");
     }).catch((error)=>{
