@@ -296,6 +296,27 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@liveblocks/client@2.6.0", "@liveblocks/client@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@liveblocks/client/-/client-2.6.0.tgz#2376c0c3a044b85195bd1a778e379fcb89f5bb0d"
+  integrity sha512-zECFounItJWp2WIQcs/twoR57k+XfdAeKEEVbpTCc72G+etdVJ2K6fU2bKNMIpPcfrB3EsCc/7+qy0LewRPYpg==
+  dependencies:
+    "@liveblocks/core" "2.6.0"
+
+"@liveblocks/core@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@liveblocks/core/-/core-2.6.0.tgz#f7ae2a3a70b10d5cadb2cdfd56d80feaae5a64a0"
+  integrity sha512-fE1HMa4YXI7Q+XOZDv3rO54xKM6tLqBDuubhKn8oy7HozLgzfAJLEWs5ePUOWUyGwlCIAtFbtNEBpKmZEneKxQ==
+
+"@liveblocks/react@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@liveblocks/react/-/react-2.6.0.tgz#b6174756b96af13962461528aa4ce07a4f204b44"
+  integrity sha512-xFxBU129fLkeCrgMZE3PifreKLa5xFkVMlMjNm3GHAk8RGen+t5B2MM/4jJPXsagWCewgUpzLWsYXbodum2oHw==
+  dependencies:
+    "@liveblocks/client" "2.6.0"
+    "@liveblocks/core" "2.6.0"
+    use-sync-external-store "^1.2.2"
+
 "@next/env@14.2.7":
   version "14.2.7"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-14.2.7.tgz#40fcd6ccdd53fd7e6788a0604f39032c84bea112"
@@ -3512,7 +3533,7 @@ use-sidecar@^1.1.2:
     detect-node-es "^1.1.0"
     tslib "^2.0.0"
 
-use-sync-external-store@1.2.2, use-sync-external-store@^1.2.0:
+use-sync-external-store@1.2.2, use-sync-external-store@^1.2.0, use-sync-external-store@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.2.tgz#c3b6390f3a30eba13200d2302dcdf1e7b57b2ef9"
   integrity sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==
