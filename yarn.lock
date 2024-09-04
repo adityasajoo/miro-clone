@@ -1137,6 +1137,11 @@ confusing-browser-globals@^1.0.10:
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
+convex-helpers@^0.1.55:
+  version "0.1.55"
+  resolved "https://registry.yarnpkg.com/convex-helpers/-/convex-helpers-0.1.55.tgz#6fe0cec85101537a88560f68c8b81fa1469fc120"
+  integrity sha512-ieEXZimFb8ZDT2KFL0eTW8/BLLFKx3NLKjgbpZOixRP9l+7vaaLZs6uuQAtAfYr9DIeQb4cga+q7R85QgiZ0eg==
+
 convex@^1.15.0:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/convex/-/convex-1.15.0.tgz#8098bf73ca451b66f8ff444c3439a8c684149b7c"

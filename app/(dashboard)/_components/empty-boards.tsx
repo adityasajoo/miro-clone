@@ -7,12 +7,13 @@ import {api} from "@/convex/_generated/api";
 import { useOrganization } from "@clerk/nextjs";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { toast } from "sonner";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 const EmptyBoards = (props: Props) => {
   // const create = useMutation(api.board.create);
-
+  const router = useRouter();
   const {mutate, pending} = useApiMutation(api.board.create);
 
   const {organization} = useOrganization();
@@ -24,6 +25,7 @@ const EmptyBoards = (props: Props) => {
       title: "Untitled board",
     }).then((id)=>{
       toast.success("Board created");
+      router.push(`/board/${id}`);
     }).catch((error)=>{
       toast.error("Failed to create board");
       console.error(error);
