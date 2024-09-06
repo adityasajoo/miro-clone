@@ -13,7 +13,6 @@ const Participants = (props: Props) => {
   const users = useOthersMapped(
     (other) =>{
       const connectionId = other.connectionId;
-      console.log(other)
         const info = other.info as {name: string, picture: string};
 
       return {connectionId, info}
